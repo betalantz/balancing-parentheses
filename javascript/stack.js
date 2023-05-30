@@ -33,8 +33,7 @@ class Stack {
     }
 
     search(target){
-        const reversed = this.stack.toReversed()
-        return reversed.indexOf(target)
+        return reversed.lastIndexOf(target)
     }
 
     print(){

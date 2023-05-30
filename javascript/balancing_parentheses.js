@@ -1,7 +1,7 @@
 const Stack = require('./stack');
-const stack = new Stack()
 
 function balancingParentheses(string) {
+  const stack = new Stack()
   // type your code here
 }
 
