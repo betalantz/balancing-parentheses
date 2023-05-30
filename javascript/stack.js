@@ -33,7 +33,7 @@ class Stack {
     }
 
     search(target){
-        return reversed.lastIndexOf(target)
+        return this.stack.lastIndexOf(target)
     }
 
     print(){
