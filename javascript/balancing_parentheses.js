@@ -1,3 +1,6 @@
+const Stack = require('./stack');
+const stack = new Stack()
+
 function balancingParentheses(string) {
   // type your code here
 }
