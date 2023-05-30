@@ -3,6 +3,14 @@ const Stack = require('./stack');
 function balancingParentheses(string) {
   const stack = new Stack()
   // type your code here
+  for (let c of string){
+    if (c == ')' && stack.peek() == '('){
+      stack.pop()
+    } else {
+      stack.push(c)
+    }
+  }
+  return stack.size()
 }
 
 if (require.main === module) {
@@ -16,9 +24,14 @@ if (require.main === module) {
   console.log(balancingParentheses('()))'));
 
   console.log("");
-
+  
   console.log("Expecting: 1");
   console.log(balancingParentheses(')'));
+  
+  console.log("");
+  
+  console.log("Expecting: 2");
+  console.log(balancingParentheses(')()('));
 }
 
 module.exports = balancingParentheses;
