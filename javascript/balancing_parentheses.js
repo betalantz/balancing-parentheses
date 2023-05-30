@@ -1,8 +1,16 @@
 const Stack = require('./stack');
-const stack = new Stack()
 
 function balancingParentheses(string) {
+  const stack = new Stack()
   // type your code here
+  for (let c of string){
+    if (stack.peek() == '(' && c == ')'){
+      stack.pop()
+    } else {
+      stack.push(c)
+    }
+  }
+  return stack.size()
 }
 
 if (require.main === module) {
